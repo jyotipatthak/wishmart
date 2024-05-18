@@ -1,13 +1,14 @@
-# 💫`Wish webApp`
+## 💫`Wish webApp`
   Wish WebApp is an e-commerce platform where users can browse, select, and purchase products to fulfill their wishes. The website offers a seamless and responsive shopping experience, allowing users to easily navigate through different product categories and manage their shopping cart. To make a purchase, users must sign up and log in to the platform.
 
-# Features:
+## Features:
 
 Category Selection: Users can browse products by category, such as furniture, and add multiple items to their cart.
 Responsive Design: The website provides a seamless experience across various devices.
 Cart Management: Users can view and manage the items in their cart before making a purchase.
 
-# Main pages of the project
+## Main pages of the project
+
 # Home page 
 
 #  Signup 
@@ -44,7 +45,7 @@ Cart Management: Users can view and manage the items in their cart before making
 - 1. Clone this repository:
 
 ```bash
-  https://
+  https://github.com/jyotipatthak/wishmart
 ```
 
 2. Install dependencies:
@@ -64,9 +65,8 @@ Cart Management: Users can view and manage the items in their cart before making
 
 **Link to wish web app video**: paste video link
 
-**Web Deployed Link**:  paste deployment link
+**Web Deployed Link**:  https://wishmart.vercel.app/
 
-**API Schema Documentation** :  docomentaion
 
 ## 🎋 `COLLABORATORS`
 This project is created within a team of two members.
