@@ -43,9 +43,9 @@ Cart Management: Users can view and manage the items in their cart before making
 - To run this project locally, use the following command in your CLI:
 - 1. Clone this repository:
 
-```bash
-  https://
-```
+```bash :
+  https://github.com/jyotipatthak/wishmart/
+``` 
 
 2. Install dependencies:
 
@@ -64,9 +64,7 @@ Cart Management: Users can view and manage the items in their cart before making
 
 **Link to wish web app video**: paste video link
 
-**Web Deployed Link**:  paste deployment link
-
-**API Schema Documentation** :  docomentaion
+**Web Deployed Link**:  https://wishmart.vercel.app/
 
 ## 🎋 `COLLABORATORS`
 This project is created within a team of two members.
