@@ -16,6 +16,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+    // Function to handle logout
     const handleLogout = () => {
         setIsLoggedIn(false); // Update isLoggedIn state to false after logout
     };
@@ -23,22 +24,25 @@ function App() {
     return (
         <Provider store={store}> {/* Provide the Redux store to the application */}
             <BrowserRouter>
-            
+                {/* Conditional rendering of Navbar based on user authentication */}
                 {isLoggedIn ? (
-                    <AuthNavbar onLogout={handleLogout} />
+                    <AuthNavbar onLogout={handleLogout} /> 
                 ) : (
                     <Navbar />
                 )}
-                <div className='p-8 bg-[#a3c2e2]'>
-                <Routes>
-                    <Route path='/' element={<HeroHome />} />
-                    <Route path='/login' element={<Login setIsLoggedIn={setIsLoggedIn} />} />
-                    <Route path='/signup' element={<SignUp setIsLoggedIn={setIsLoggedIn} />} />
-                    <Route path='/product' element={<Product />} />
-                    <Route path='/cart' element={<Cart />} /> {/* Route for the Cart component */}
-                    <Route path='/about' element={<About />} />
-                </Routes>
+                {/* Main content of the application */}
+                <div className='p-8 bg-[#a3c2e2]'> {/* Styling for the main content */}
+                    <Routes>
+                        {/* Define routes for different components */}
+                        <Route path='/' element={<HeroHome />} /> {/* Default route */}
+                        <Route path='/login' element={<Login setIsLoggedIn={setIsLoggedIn} />} /> {/* Route for Login component */}
+                        <Route path='/signup' element={<SignUp setIsLoggedIn={setIsLoggedIn} />} /> {/* Route for SignUp component */}
+                        <Route path='/product' element={<Product />} /> {/* Route for Product component */}
+                        <Route path='/cart' element={<Cart />} /> {/* Route for Cart component */}
+                        <Route path='/about' element={<About />} /> {/* Route for About component */}
+                    </Routes>
                 </div>
+                {/* Container for displaying toasts */}
                 <ToastContainer />
             </BrowserRouter>
         </Provider>

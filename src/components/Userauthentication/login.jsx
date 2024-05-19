@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
-import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import APIService from '../../utils/services.jsx/ApiService';
-import 'react-toastify/dist/ReactToastify.css';
+import React, { useState } from 'react'; // Importing React and useState hook
+import { toast } from 'react-toastify'; // Importing toast for notifications
+import { useNavigate } from 'react-router-dom'; // Importing useNavigate for navigation
+import { Link } from 'react-router-dom'; // Importing Link for navigation
+import APIService from '../../utils/services.jsx/ApiService'; // Importing custom API service
+import 'react-toastify/dist/ReactToastify.css'; // Importing toast styles
 
 function Login({ setIsLoggedIn }) {
-    const navigate = useNavigate();
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const navigate = useNavigate(); // Initializing useNavigate for redirection
+    const [email, setEmail] = useState(''); // State to store email
+    const [password, setPassword] = useState(''); // State to store password
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        
+        e.preventDefault(); // Prevent form default submission
+
         // Check if password is at least 6 characters long
         if (password.length < 6) {
-            toast.error('password length is at least 6', {
+            toast.error('Password length is at least 6', {
                 position: "bottom-right",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -27,20 +27,20 @@ function Login({ setIsLoggedIn }) {
             });
             return; // Exit the function if password is invalid
         }
-        
+
         const data = {
             email: email,
             password: password
         };
-        
+
         try {
-            const Api = new APIService();
-            const result = await Api.post('auth/login', false, data);
+            const Api = new APIService(); // Creating an instance of APIService
+            const result = await Api.post('auth/login', false, data); // Sending login request
             if (result.access_token) {
-                await localStorage.setItem('token', result.access_token); 
-                await localStorage.setItem('refreshToken', result.refresh_token);
+                await localStorage.setItem('token', result.access_token); // Storing access token in local storage
+                await localStorage.setItem('refreshToken', result.refresh_token); // Storing refresh token in local storage
                 setIsLoggedIn(true); // Update isLoggedIn state to true after successful login
-                
+
                 toast.success('User logged in successfully', {
                     position: "bottom-right",
                     autoClose: 5000,
@@ -51,9 +51,9 @@ function Login({ setIsLoggedIn }) {
                     progress: undefined,
                     theme: "black",
                 });
-                navigate('/');
+                navigate('/'); // Redirect to home page
             } else {
-                toast.error('user credential is not correct', {
+                toast.error('User credential is not correct', {
                     position: "bottom-right",
                     autoClose: 5000,
                     hideProgressBar: false,
@@ -65,7 +65,7 @@ function Login({ setIsLoggedIn }) {
                 });
             }
         } catch (error) {
-            toast.error('user credential is not correct', {
+            toast.error('User credential is not correct', {
                 position: "bottom-right",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -79,7 +79,7 @@ function Login({ setIsLoggedIn }) {
     };
 
     return (
-        <div className="py-16 min-h-screen flex justify-center items-center bg-[#96c4f6]  flex-col px-4 sm:px-6 lg:px-8">
+        <div className="py-16 min-h-screen flex justify-center items-center bg-[#96c4f6] flex-col px-4 sm:px-6 lg:px-8">
             <div className="p-8 rounded shadow-md text-black w-full bg-white max-w-md">
                 <h2 className="text-2xl font-bold mb-6 text-center">
                     <svg className='w-10 mx-auto h-12 mb-2' fill="none" viewBox="0 0 35 32" xmlns="http://www.w3.org/2000/svg">
@@ -125,4 +125,4 @@ function Login({ setIsLoggedIn }) {
     );
 }
 
-export default Login;
+export default Login; // Exporting Login component as default
