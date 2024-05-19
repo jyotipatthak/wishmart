@@ -12,7 +12,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="flex-row bg-[#96c4f6] ">
+    <div className="flex-row bg-[#a3c2e2]">
       <div >
         <div className="py-5 p-8 mt-10 flex  text-white">
          

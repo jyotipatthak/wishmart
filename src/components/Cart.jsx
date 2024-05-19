@@ -18,7 +18,7 @@ function Cart() {
   };
 
   return (
-    <div className="bg-[#bdd2e8] text-white min-h-screen flex flex-col mt-10 p-4">
+    <div className="bg-[#bdd2e8] text-white min-h-screen flex flex-col mt-10 p-8">
       <h2 className="text-3xl font-bold mb-4 text-center text-black">Shopping Cart</h2>
       <ul className="w-full space-y-4">
         {cartItems.map(item => (
@@ -27,11 +27,12 @@ function Cart() {
               <img src={item.images} alt={item.title} className="w-20 h-28 text-black object-cover mr-4" />
               <div>
                 <h3 className="text-lg text-black font-semibold">{item.title}</h3>
+                <h3 className="text-lg text-black font-semibold">{item.price * (item.quantity ?? 1)}</h3>
                 <div className="flex items-center mt-2">
                   <span className="text-black mr-2">Quantity:</span>
                   <input
                     type="number"
-                    value={item.quantity}
+                    value={item.quantity ?? 1}
                     onChange={(e) => handleQuantityChange(item.id, e.target.value)}
                     className="w-16 border text-black border-gray-400 rounded px-2 py-1"
                     min="1"

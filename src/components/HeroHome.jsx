@@ -29,12 +29,12 @@ function HeroHome() {
     };
 
     return (
-        <div className=" overflow-hidden bg-[#a3c2e2]">
+        <div className=" overflow-hidden  bg-[#a3c2e2]">
             <div className="items-center justify-center">
-                <div className="text-center">
+                <div className="text-center"> 
                 
                 </div>
-                    <div className="mt-8 gap-4 overflow-hidden rounded-lg p-4">
+                    <div className="mt-4 gap-4 overflow-hidden rounded-lg p-4">
                         <h1 className="text-black font-serif rounded-lg text-3xl underline mb-2">Trending products</h1>
                         <div ref={containerRef} className="flex gap-4 rounded-lg overflow-x-auto scroll-smooth">
                             {products.map(product => (
@@ -57,7 +57,7 @@ function HeroHome() {
             </div>
 
             {/* Description Section */}
-            <div className="container mx-auto py-12">
+            <div className="container mx-auto p-8 py-12">
                 <h2 className="text-3xl text-black font-bold text-center mb-4 animate-fade-in-delay">Why Choose Us?</h2>
                 <p className="text-lg text-center text-black mb-8 animate-fade-in-delay">We handpick our products to ensure they meet the highest quality standards. Whether you’re looking for electronics, fashion, home goods, or more, you can trust that our items are built to last and perform to your expectations.</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">

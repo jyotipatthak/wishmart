@@ -23,12 +23,13 @@ function App() {
     return (
         <Provider store={store}> {/* Provide the Redux store to the application */}
             <BrowserRouter>
+            
                 {isLoggedIn ? (
                     <AuthNavbar onLogout={handleLogout} />
                 ) : (
                     <Navbar />
                 )}
-                
+                <div className='p-8 bg-[#a3c2e2]'>
                 <Routes>
                     <Route path='/' element={<HeroHome />} />
                     <Route path='/login' element={<Login setIsLoggedIn={setIsLoggedIn} />} />
@@ -37,6 +38,7 @@ function App() {
                     <Route path='/cart' element={<Cart />} /> {/* Route for the Cart component */}
                     <Route path='/about' element={<About />} />
                 </Routes>
+                </div>
                 <ToastContainer />
             </BrowserRouter>
         </Provider>
