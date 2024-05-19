@@ -67,7 +67,6 @@ Cart Management: Users can view and manage the items in their cart before making
 
 **Web Deployed Link**:  https://wishmart.vercel.app/
 
-
 ## 🎋 `COLLABORATORS`
 This project is created within a team of two members.
 - [@MD Shahnawaz](https://github.com/Shahnawaz1967)
