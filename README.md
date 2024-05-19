@@ -82,7 +82,7 @@ Cart Management: Users can view and manage the items in their cart before making
 
 ## API
 
-**Link of gitgub page** https://docs.google.com/document/d/19iEA9YereVxkWHDOKZ4iJgl9-8_el6cAFk3tVEKaMqk/edit?usp=sharing
+**Api which i used** :https://docs.google.com/document/d/19iEA9YereVxkWHDOKZ4iJgl9-8_el6cAFk3tVEKaMqk/edit?usp=sharing
 
 ## 🎋 `COLLABORATORS`
 This project is created within a team of two members.
