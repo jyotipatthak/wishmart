@@ -9,17 +9,21 @@ Cart Management: Users can view and manage the items in their cart before making
 
 ## Main pages of the project
 
-# Home page 
+![Home page](./assets/home1.jpg)
 
-#  Signup 
+![products page](./assets/product.jpg)
 
-#  Login
+![About](./assets/about.jpg)
 
-#  products page
+![Cart](./assets/cart.jpg)
 
-#  about page
+![Signup](./assets/signup.jpg)
 
-#   cart
+![Login](./assets/login.jpg)
+
+![After login](./assets/profile.jpg)
+
+![Footer](./assets/footer.jpg)
 
 
 ##  🌿 `Project Folder Structure`
