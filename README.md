@@ -76,7 +76,7 @@ Cart Management: Users can view and manage the items in their cart before making
 
 **Link of gitgub page** : https://github.com/jyotipatthak/wishmart
 
-**Link to wish web app video**: https://www.youtube.com/watch?v=8u3__fVBUVI
+**Link to wish web app video**: https://youtu.be/12DpNd5jJXo?si=EpFyYPLAUBAc8Dd3
 
 **Web Deployed Link**:  https://wishmart.vercel.app/
 
